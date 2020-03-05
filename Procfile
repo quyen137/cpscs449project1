@@ -1,2 +1,2 @@
-api: gunicorn3 -b :5000 api:app
-api: gunicorn3 -b :5100 api2:app
+api: gunicorn3 api:app
+api: gunicorn3 api2:app
