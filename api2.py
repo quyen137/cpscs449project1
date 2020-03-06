@@ -57,7 +57,7 @@ def init_db():
 @app.route('/', methods=['GET'])
 def home():
     return '''<h1>Distant Reading Archive</h1>
-<p>VOTES</p>'''
+<p>NON API</p>'''
 
 
 @app.route('/api/v1/resources/books/all', methods=['GET'])

@@ -1,11 +1,13 @@
 localhost/posts {
-    proxy / 127.0.0.1:5000 :5001 5002 {
+    proxy / 127.0.0.1:5000 :5001 :5002 {
         policy round_robin
+        transparent
     }
 }
 
 localhost/votes {
-    proxy / 127.0.0.1:5100 :5101 5102 {
+    proxy / 127.0.0.1:5100 :5101 :5102 {
         policy round_robin
+        transparent
     }
 }
