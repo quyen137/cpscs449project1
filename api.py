@@ -44,7 +44,7 @@ def init_db():
 @app.route('/', methods=['GET'])
 def home():
     return '''<h1>Distant Reading Archive</h1>
-<p>A prototype API for distant reading of science fiction novels.</p>'''
+<p>POSTS</p>'''
 
 
 @app.route('/api/v1/resources/books/all', methods=['GET'])
@@ -111,6 +111,3 @@ def filter_books(query_parameters):
     results = queries._engine.execute(query, to_filter).fetchall()
 
     return list(map(dict, results))
-
-if __name__ == "__api__":
-    app.run(host="localhost:2015/api")
